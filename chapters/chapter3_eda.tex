@@ -1,0 +1,49 @@
+\chapter{DỮ LIỆU VÀ PHÂN TÍCH KHÁM PHÁ}
+\section{Mô tả bộ dữ liệu}
+Bộ dữ liệu có tên \texttt{bedtime\_screentime\_sleep\_debt.csv}. Nhóm cần nêu nguồn dữ liệu, đơn vị quan sát, cách thu thập, thời gian thu thập và giấy phép sử dụng nếu có.
+\begin{table}[H]\centering
+\caption{Thông tin tổng quan bộ dữ liệu}
+\begin{tabularx}{0.9\textwidth}{lX}\toprule
+Tên tệp & \texttt{bedtime\_screentime\_sleep\_debt.csv}\\
+Số dòng & [Điền từ kết quả kiểm tra]\\
+Số cột & [Điền từ kết quả kiểm tra]\\
+Nguồn dữ liệu & [Điền nguồn đã xác minh]\\
+\bottomrule\end{tabularx}\end{table}
+\section{Kiểm tra chất lượng dữ liệu}
+Kiểm tra giá trị thiếu, dòng trùng lặp, kiểu dữ liệu, giá trị ngoài phạm vi hợp lý và phân phối bất thường. Ghi số lượng trước/sau xử lý và lý do cho mỗi quyết định.
+\begin{table}[H]\centering
+\caption{Tổng hợp chất lượng dữ liệu}
+\begin{tabularx}{0.9\textwidth}{Xrr}\toprule
+Tiêu chí & Trước xử lý & Sau xử lý\\\midrule
+Số dòng & [ ] & [ ]\\
+Số ô thiếu & [ ] & [ ]\\
+Số dòng trùng & [ ] & [ ]\\
+Giá trị ngoài phạm vi & [ ] & [ ]\\\bottomrule
+\end{tabularx}\end{table}
+\section{Thống kê mô tả}
+Trình bày số lượng, tỷ lệ, trung bình, độ lệch chuẩn, trung vị, khoảng tứ phân vị, min và max tùy kiểu biến. Không điền số liệu khi chưa chạy mã phân tích.
+\section{Tương quan giữa thời lượng dùng điện thoại và giấc ngủ}
+Khảo sát \texttt{bedtime\_phone\_minutes} với \texttt{sleep\_latency\_min} và \texttt{total\_sleep\_hours} bằng biểu đồ phân tán, hệ số Pearson hoặc Spearman tùy phân phối.
+\begin{figure}[H]\centering
+\fbox{\parbox[c][4.5cm][c]{0.82\textwidth}{\centering Chèn biểu đồ phân tán hoặc biểu đồ tương quan}}
+\caption{Mối liên hệ giữa thời lượng dùng điện thoại và chỉ số giấc ngủ}\label{fig:phone-sleep}
+\end{figure}
+\noindent\textbf{Kết quả:} [Điền hệ số, khoảng tin cậy nếu có, p-value và diễn giải.]
+\section{Độ sáng, bộ lọc ánh sáng xanh và pha ngủ}
+So sánh \texttt{deep\_sleep\_pct} và \texttt{rem\_sleep\_pct} theo độ sáng màn hình và trạng thái \texttt{blue\_light\_filter\_active}. Cân nhắc yếu tố gây nhiễu và kích thước nhóm.
+\noindent\textbf{Kết quả:} [Điền biểu đồ, kiểm định và diễn giải.]
+\section{Sử dụng điện thoại, caffeine và mệt mỏi}
+Có thể khảo sát biến tương tác bằng mô hình hồi quy phù hợp. Ví dụ minh họa:
+\[
+Y=\beta_0+\beta_1X_{\text{phone}}+\beta_2X_{\text{caffeine}}+
+\beta_3(X_{\text{phone}}\times X_{\text{caffeine}})+\epsilon.
+\]
+Trong đó \(Y\) là điểm mệt mỏi ngày hôm sau. Chọn mô hình cuối cùng dựa trên kiểu dữ liệu và giả định.
+\noindent\textbf{Kết quả:} [Điền hệ số, khoảng tin cậy, p-value và diễn giải.]
+\section{So sánh theo nghề nghiệp và ứng dụng}
+Lập bảng chéo tỷ lệ nợ ngủ theo nghề nghiệp. So sánh số lần hoãn báo thức theo ứng dụng dùng trước khi ngủ. Chọn kiểm định phù hợp và báo cáo kích thước ảnh hưởng khi có thể.
+\noindent\textbf{Kết quả nghề nghiệp:} [Điền bảng và kết quả kiểm định.]
+\\
+\noindent\textbf{Kết quả ứng dụng:} [Điền thống kê và kết quả kiểm định.]
+\section{Tóm tắt EDA}
+Tóm tắt phát hiện cho từng câu hỏi nghiên cứu, bằng chứng thống kê và giới hạn. Không dùng kết quả từ tập kiểm tra để lựa chọn đặc trưng cho mô hình.

@@ -1,0 +1,31 @@
+KHUON BAO CAO - BAN DUNG VOI PRISM (OPENAI)
+
+Cau truc thu muc:
+- main.tex: tep chinh, bat dau bien dich tu day
+- chapters/: cac chuong rieng
+- references.bib: tai lieu tham khao BibTeX
+- figures/: dat hinh/bieu do cua nhom vao day
+
+CACH DUA VAO PRISM
+1. Mo Prism va mo/tạo workspace hoac tai lieu cho bao cao cua ban.
+2. Neu giao dien co chuc nang import/upload project hoac tep, tai len cac tep trong ZIP va giu nguyen cau truc thu muc. Khong doi ten main.tex hay thu muc chapters.
+3. Mo main.tex lam tep chinh. Neu Prism co tuy chon compiler/engine, chon XeLaTeX vi tep nay dung fontspec va Times New Roman. Neu Prism tu chon engine, thu bien dich va xem thong bao loi.
+4. Kiem tra cac dong \input{chapters/...}; cac tep duoc goi phai nam dung duong dan. Kiem tra ibliography{references}; tep references.bib phai nam cung cap voi main.tex.
+5. Dien ten thanh vien, MSSV va thong tin lop; thay cac cho [Dien...] bang mo ta va ket qua thuc nghiem that.
+6. Them hinh vao figures/ va chen bang \includegraphics{ten_hinh.png}. Ten tep phai dung voi tep da tai len.
+7. Them nguon vao references.bib, trich dan trong noi dung bang \citep{key} hoac \citet{key}. Neu Prism co cong cu quan ly citation rieng, van can kiem tra ket qua cuoi co dung dinh dang ma giang vien yeu cau.
+8. Bien dich lai sau khi thay doi tai lieu tham khao de cap nhat trich dan va danh muc tai lieu tham khao.
+
+NEU PRISM KHONG NHAN ZIP / KHONG HO TRO NHIEU TEP
+- Thu tao project truoc, sau do them tung tep va tao dung thu muc chapters va figures.
+- Neu workspace hien tai chi cho phep mot tep LaTeX, noi minh biet hoac gui anh giao dien; co the chuyen bo khuon thanh mot main.tex duy nhat, nhung se mat tinh tach rieng tung chuong.
+- Cac nut va ten menu co the khac nhau theo phien ban Prism; huong dan nay khong gia dinh mot nut cu the neu giao dien cua ban khong hien thi.
+
+LOI THUONG GAP
+- fontspec / font Times New Roman: can XeLaTeX hoac engine tuong thich; neu khong co, gui thong bao loi de minh dieu chinh.
+- File `chapters/...` not found: kiem tra viet hoa, ten tep va duong dan.
+- Khong hien tai lieu tham khao: kiem tra references.bib, key trong \citep{...}, va chay lai bien dich.
+- Hinh khong hien: kiem tra tep hinh nam trong figures/ va ten tep trong \includegraphics.
+
+LUU Y VE NOI DUNG
+Day la khuon bao cao, khong phai ket qua nghien cuu da xac nhan. Khong tu dien so lieu, diem so mo hinh hoac ket luan khi chua chay phan tich.

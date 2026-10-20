@@ -1,0 +1,28 @@
+\chapter{GIỚI THIỆU ĐỀ TÀI}
+\section{Lý do chọn đề tài}
+Điện thoại thông minh được sử dụng rộng rãi cho học tập, công việc và giải trí. Việc sử dụng thiết bị vào buổi tối có thể liên hệ với thời điểm đi ngủ, độ trễ bắt đầu ngủ và trạng thái tỉnh táo vào ngày hôm sau. Mối liên hệ này có thể thay đổi theo thói quen sinh hoạt, loại ứng dụng, cài đặt màn hình, caffeine và đặc điểm cá nhân. Từ góc độ khoa học dữ liệu, bộ dữ liệu \texttt{bedtime\_screentime\_sleep\_debt.csv} cho phép nhóm khảo sát các mối liên hệ và đánh giá khả năng dự báo nợ ngủ bằng học máy.
+\section{Mục tiêu nghiên cứu}
+\subsection{Mục tiêu tổng quát}
+Phân tích mối liên hệ giữa hành vi sử dụng điện thoại trước khi ngủ và các chỉ số liên quan đến giấc ngủ, đồng thời đánh giá mô hình học máy dự báo nhóm nợ ngủ.
+\subsection{Mục tiêu cụ thể}
+\begin{itemize}[leftmargin=1.2cm]
+\item Kiểm tra chất lượng và mô tả bộ dữ liệu.
+\item Phân tích tương quan giữa thời lượng dùng điện thoại và các chỉ số giấc ngủ.
+\item So sánh nhóm nghề nghiệp, ứng dụng trước giờ ngủ và các kết quả liên quan.
+\item Huấn luyện, so sánh mô hình phân loại \texttt{sleep\_debt\_category}.
+\item Giải thích đóng góp của các đặc trưng và nêu hạn chế.
+\end{itemize}
+\section{Câu hỏi nghiên cứu}
+\begin{enumerate}[leftmargin=1.2cm]
+\item Thời lượng dùng điện thoại (\texttt{bedtime\_phone\_minutes}) liên hệ thế nào với độ trễ giấc ngủ và tổng thời gian ngủ?
+\item Độ sáng màn hình và bộ lọc ánh sáng xanh liên hệ thế nào với tỷ lệ giấc ngủ sâu và REM?
+\item Sự kết hợp giữa sử dụng điện thoại muộn và caffeine sau 17 giờ liên hệ thế nào với mệt mỏi ngày hôm sau?
+\item Tỷ lệ nợ ngủ có khác nhau giữa các nhóm nghề nghiệp không?
+\item Số lần báo thức lại có khác nhau giữa các nhóm ứng dụng trước giờ ngủ không?
+\item Các mô hình học máy dự báo \texttt{sleep\_debt\_category} đạt hiệu suất như thế nào?
+\item Những đặc trưng nào đóng góp nhiều nhất vào dự đoán của mô hình?
+\end{enumerate}
+\section{Đối tượng và phạm vi}
+Đối tượng là các bản ghi trong tệp dữ liệu nêu trên. Nhóm cần ghi rõ nguồn, cách thu thập, thời điểm thu thập và cách lấy mẫu nếu thông tin được cung cấp. Không suy đoán những thông tin chưa được xác minh.
+\section{Ý nghĩa và bố cục báo cáo}
+Nghiên cứu minh họa việc kết hợp EDA, kiểm định thống kê, học máy và giải thích mô hình. Nếu dữ liệu là dữ liệu quan sát, kết quả không tự động chứng minh quan hệ nhân quả. Báo cáo gồm năm chương: giới thiệu; cơ sở lý thuyết; phân tích dữ liệu; mô hình học máy; kết luận và kiến nghị.

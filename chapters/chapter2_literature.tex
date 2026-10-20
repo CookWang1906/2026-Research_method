@@ -1,0 +1,18 @@
+\chapter{CƠ SỞ LÝ THUYẾT VÀ NGHIÊN CỨU LIÊN QUAN}
+\section{Chất lượng giấc ngủ và nợ ngủ}
+Trong báo cáo, các khía cạnh liên quan đến giấc ngủ được khảo sát qua độ trễ đi vào giấc ngủ, tổng thời gian ngủ, tỷ lệ giấc ngủ sâu, tỷ lệ REM và điểm mệt mỏi ngày hôm sau. Cần trích dẫn nguồn khoa học khi giải thích ý nghĩa của các chỉ số. Phải xác minh định nghĩa và quy tắc gán nhãn của \texttt{sleep\_debt\_category}, bao gồm số lớp và ý nghĩa từng lớp.
+\section{Hành vi sử dụng điện thoại và yếu tố liên quan}
+Các biến thời lượng sử dụng điện thoại, ứng dụng chính, độ sáng và bộ lọc ánh sáng xanh mô tả các khía cạnh khác nhau của hành vi sử dụng thiết bị. Caffeine, hoạt động thể chất, tuổi, nghề nghiệp và chronotype có thể là các biến liên quan hoặc yếu tố gây nhiễu.
+\section{Phương pháp thống kê}
+Thống kê mô tả gồm trung bình, độ lệch chuẩn, trung vị, khoảng tứ phân vị, tần suất và tỷ lệ. Pearson đo liên hệ tuyến tính giữa hai biến số; Spearman có thể phù hợp hơn khi dữ liệu không đáp ứng giả định cần thiết. So sánh nhóm có thể dùng t-test/ANOVA hoặc kiểm định phi tham số tùy dữ liệu; biến phân loại có thể dùng Chi-square hoặc Fisher. Cần báo cáo giả thuyết, p-value, kích thước ảnh hưởng và xử lý so sánh nhiều lần khi phù hợp.
+\section{Mô hình học máy}
+\subsection{Logistic Regression}
+Mô hình cơ sở có khả năng diễn giải tương đối thuận tiện. Với nhiều lớp, cần xác định chiến lược đa lớp và tiền xử lý phù hợp.
+\subsection{Random Forest}
+Random Forest kết hợp nhiều cây quyết định để mô hình hóa quan hệ phi tuyến. Feature importance không đồng nghĩa với tác động nhân quả \citep{breiman2001randomforest}.
+\subsection{XGBoost}
+XGBoost là phương pháp boosting dựa trên cây, thường được dùng với dữ liệu dạng bảng \citep{chen2016xgboost}. Siêu tham số cần được chọn bằng validation hoặc cross-validation.
+\section{Đánh giá và giải thích mô hình}
+Báo cáo Accuracy cùng Precision, Recall, F1-score theo lớp và Macro-F1. Ma trận nhầm lẫn cho biết các lớp bị dự đoán nhầm. SHAP hỗ trợ diễn giải đóng góp của đặc trưng vào dự đoán nhưng không chứng minh quan hệ nhân quả \citep{lundberg2017shap}.
+\section{Khung và giả thuyết nghiên cứu}
+Quy trình gồm kiểm tra dữ liệu, EDA và kiểm định, xây dựng mô hình, giải thích và thảo luận. Các giả thuyết có thể gồm: thời lượng dùng điện thoại liên hệ với độ trễ giấc ngủ; thời lượng dùng điện thoại liên hệ với tổng thời gian ngủ; caffeine và thời lượng điện thoại có thể có tương tác với mệt mỏi; phân bố nợ ngủ khác nhau theo nghề nghiệp; số lần báo thức lại khác nhau theo nhóm ứng dụng. Đây là giả thuyết cần kiểm tra, không phải kết luận có sẵn.

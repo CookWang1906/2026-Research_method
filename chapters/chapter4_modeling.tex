@@ -1,0 +1,47 @@
+\chapter{XÂY DỰNG VÀ ĐÁNH GIÁ MÔ HÌNH HỌC MÁY}
+\section{Xác định bài toán và kiểm tra nhãn}
+Biến mục tiêu là \texttt{sleep\_debt\_category}. Xác minh số lớp, số mẫu từng lớp và quy tắc gán nhãn. Nếu nhãn được tạo trực tiếp từ \texttt{total\_sleep\_hours} hoặc một biến đầu vào khác, cần đánh giá nguy cơ rò rỉ nhãn trước khi đưa biến đó vào mô hình.
+\section{Tiền xử lý và lựa chọn đặc trưng}
+Mô tả cách xử lý giá trị thiếu, mã hóa biến phân loại, chuẩn hóa khi cần, và xử lý mất cân bằng lớp. Các bước học từ dữ liệu phải được fit chỉ trên tập huấn luyện trong từng fold. Nêu rõ biến nào được sử dụng và lý do loại bỏ các biến không phù hợp.
+\section{Chia dữ liệu và đánh giá}
+Có thể chia train/test có phân tầng theo nhãn nếu phù hợp. Dùng cross-validation trên tập huấn luyện để chọn siêu tham số; chỉ dùng tập kiểm tra cho đánh giá cuối cùng.
+\begin{itemize}[leftmargin=1.2cm]
+\item Tỷ lệ train/test: [Điền].
+\item Số fold: [Điền].
+\item Random seed: [Điền].
+\item Xử lý mất cân bằng: [Điền].
+\item Phiên bản thư viện: [Điền].
+\end{itemize}
+\section{Mô hình}
+\subsection{Logistic Regression}
+Mô hình cơ sở; mô tả mã hóa, chuẩn hóa, chiến lược đa lớp và tham số.
+\subsection{Random Forest}
+Ghi các tham số như số cây, độ sâu tối đa và cách chọn tham số.
+\subsection{XGBoost}
+Nếu sử dụng, ghi phiên bản, hàm mục tiêu và quá trình điều chỉnh tham số. Nếu không dùng được XGBoost, giải thích thuật toán thay thế.
+\section{Chỉ số đánh giá}
+Báo cáo Accuracy, Precision, Recall, F1-score theo lớp, Macro-F1 và ma trận nhầm lẫn. Với lớp hiếm, chú ý Recall của lớp nợ ngủ nghiêm trọng.
+\begin{table}[H]\centering
+\caption{So sánh hiệu suất mô hình}
+\begin{tabularx}{\textwidth}{Xrrrr}\toprule
+Mô hình & Accuracy & Macro-F1 & Recall lớp nghiêm trọng & Thời gian\\\midrule
+Logistic Regression & [ ] & [ ] & [ ] & [ ]\\
+Random Forest & [ ] & [ ] & [ ] & [ ]\\
+XGBoost & [ ] & [ ] & [ ] & [ ]\\\bottomrule
+\end{tabularx}\end{table}
+\section{Ma trận nhầm lẫn}
+\begin{figure}[H]\centering
+\fbox{\parbox[c][4.5cm][c]{0.8\textwidth}{\centering Chèn ma trận nhầm lẫn của mô hình cuối cùng}}
+\caption{Ma trận nhầm lẫn trên tập kiểm tra}\label{fig:confusion}
+\end{figure}
+Phân tích các lớp thường bị nhầm và các lỗi liên quan đến lớp nợ ngủ nghiêm trọng.
+\section{Giải thích mô hình bằng Feature Importance và SHAP}
+Có thể dùng Feature Importance và SHAP để khảo sát đóng góp của đặc trưng. Ghi rõ mô hình, tập dữ liệu và cách tổng hợp SHAP. Mức quan trọng không chứng minh quan hệ nhân quả.
+\begin{figure}[H]\centering
+\fbox{\parbox[c][4.5cm][c]{0.8\textwidth}{\centering Chèn biểu đồ Feature Importance hoặc SHAP}}
+\caption{Các đặc trưng quan trọng theo mô hình được chọn}\label{fig:shap}
+\end{figure}
+\section{Thảo luận và trả lời câu hỏi nghiên cứu}
+RQ6: [So sánh mô hình theo chỉ số thực nghiệm và tiêu chí chính đã chọn.]\\
+RQ7: [Nêu đặc trưng nổi bật và giới hạn diễn giải.]\\
+Không điền số liệu hoặc kết luận trước khi chạy mô hình.

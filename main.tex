@@ -1,0 +1,106 @@
+\documentclass[12pt,a4paper,oneside]{report}
+% !TEX program = xelatex
+\usepackage{fix-cm}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage[vietnamese]{babel}
+\usepackage[left=3.5cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{indentfirst}
+\setlength{\parindent}{1cm}
+\usepackage{graphicx,float,booktabs,longtable,tabularx,amsmath,enumitem}
+\DeclareMathSizes{13}{12}{8}{6}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=blue,urlcolor=blue}
+\renewcommand{\contentsname}{MỤC LỤC}
+\renewcommand{\listfigurename}{DANH MỤC HÌNH}
+\renewcommand{\listtablename}{DANH MỤC BẢNG}
+\renewcommand{\bibname}{TÀI LIỆU THAM KHẢO}
+\graphicspath{{figures/}}
+\begin{document}
+
+%---------------- BIA ----------------
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\fontsize{13pt}{18pt}\selectfont
+\begin{center}
+{\bfseries\Large ỦY BAN NHÂN DÂN TP. HỒ CHÍ MINH\\TRƯỜNG ĐẠI HỌC SÀI GÒN}
+\vspace*{2cm}
+
+{\bfseries\huge TIỂU LUẬN MÔN HỌC}
+
+\vspace{0.5cm}
+\textbf{PHƯƠNG PHÁP NGHIÊN CỨU KHOA HỌC CHO KHDL\\Mã MH: 858025}
+
+\vspace*{2cm}
+{\bfseries\huge PHÂN TÍCH MỐI LIÊN HỆ GIỮA HÀNH VI SỬ DỤNG ĐIỆN THOẠI TRƯỚC KHI NGỦ,
+CHẤT LƯỢNG GIẤC NGỦ VÀ DỰ BÁO NỢ NGỦ BẰNG HỌC MÁY}
+
+\vspace{2.5cm}
+\begin{tabbing}
+		\hspace*{2cm} {\large DANH SÁCH NHÓM:12} \\		 
+
+		\hspace*{4cm} {\large 1. Họ và tên: Phan Trần Hữu Tấn} \ \ \ \ \ Lớp: DDU1231 \\ \ \ \ \ 
+        \hspace*{4cm} {\large MSSV: 3123580042}\\
+		
+		\hspace*{4cm} {\large 2. Họ và tên: Trần Quốc Hoàng}\ \ \ \ \ Lớp: DDU1231 \\ \ \ \ \
+        \hspace*{4cm} {\large MSSV: 3123580042}\\
+
+        \hspace{2cm}\textbf{\large GIẢNG VIÊN GIẢNG DẠY:} ThS. Trương Hoàng Huy
+	\end{tabbing}    
+
+    \vspace*{0.5cm}
+	
+	\begin{center}
+		{\bf Thành phố Hồ Chí Minh  \\  2026}
+	\end{center}
+\end{center}
+\newpage
+\hypersetup{pageanchor=true}
+
+\pagenumbering{roman}
+\chapter*{LỜI CAM ĐOAN}
+Nhóm cam đoan báo cáo được thực hiện phục vụ học tập và nghiên cứu trong khuôn khổ môn học. Các nguồn tài liệu sử dụng được trích dẫn trong bài. Kết quả, bảng biểu và hình ảnh sẽ được xây dựng từ quá trình phân tích thực tế của nhóm; nhóm chịu trách nhiệm về tính trung thực của nội dung do mình thực hiện.
+\clearpage
+
+\chapter*{LỜI CẢM ƠN}
+Nhóm xin chân thành cảm ơn giảng viên ThS. Trương Hoàng Huy đã hướng dẫn và cung cấp kiến thức trong môn Phương pháp nghiên cứu khoa học cho Khoa học dữ liệu. Do giới hạn về thời gian và kinh nghiệm, báo cáo có thể còn thiếu sót; nhóm mong nhận được góp ý để hoàn thiện.
+\clearpage
+
+\chapter*{TÓM TẮT}
+Đề tài phân tích mối liên hệ giữa hành vi sử dụng điện thoại trước khi ngủ, các chỉ số giấc ngủ và mức độ nợ ngủ dựa trên bộ dữ liệu \texttt{bedtime\_screentime\_sleep\_debt.csv}. Quy trình dự kiến gồm kiểm tra chất lượng dữ liệu, phân tích khám phá dữ liệu, kiểm định sự khác biệt giữa nhóm, xây dựng các mô hình phân loại và giải thích kết quả. Các mô hình có thể gồm Logistic Regression, Random Forest và XGBoost; hiệu suất được đánh giá bằng Precision, Recall, F1-score, Macro-F1 và ma trận nhầm lẫn. Kết quả và kết luận cuối cùng sẽ được bổ sung sau khi nhóm hoàn tất thực nghiệm; báo cáo không giả định trước mô hình tốt nhất hoặc quan hệ nhân quả.
+\\
+\noindent\textbf{Từ khóa:} điện thoại trước khi ngủ, giấc ngủ, nợ ngủ, khoa học dữ liệu, học máy, SHAP.
+\clearpage
+
+\tableofcontents\clearpage
+\listoffigures\clearpage
+\listoftables\clearpage
+\chapter*{DANH MỤC TỪ VIẾT TẮT}
+\begin{longtable}{p{3cm}p{10cm}}
+\toprule
+EDA & Phân tích khám phá dữ liệu (Exploratory Data Analysis)\\
+ML & Học máy (Machine Learning)\\
+XAI & Trí tuệ nhân tạo có thể giải thích (Explainable AI)\\
+SHAP & SHapley Additive exPlanations\\
+RF & Random Forest\\
+\bottomrule
+\end{longtable}
+\clearpage
+\pagenumbering{arabic}
+
+\input{chapters/chapter1_introduction}
+\input{chapters/chapter2_literature}
+\input{chapters/chapter3_eda}
+\input{chapters/chapter4_modeling}
+\input{chapters/chapter5_conclusion}
+
+\bibliographystyle{plainnat}
+{\raggedright\bibliography{references}}
+
+\appendix
+\chapter{Mô tả biến và tái lập thực nghiệm}
+Bổ sung bảng mô tả đầy đủ các biến, nguồn dữ liệu, định nghĩa nhãn, phiên bản thư viện, random seed, cấu hình chia tập và siêu tham số. Chỉ ghi thông tin đã xác minh.
+\end{document}
